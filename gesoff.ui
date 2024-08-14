@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GesOff</class>
+ <widget class="QMainWindow" name="GesOff">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1306</width>
+    <height>648</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>GesOff</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pushButton_modifierO">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>400</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {   font-family: 'Montserrat', sans-serif;   font-size: 10px;   color: #fff;   background-color: #023020;   border-radius: 10px;   padding: 20px;   text-shadow: 2px 2px #333;   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
+</string>
+    </property>
+    <property name="text">
+     <string>MODIFIER</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_posteV">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>200</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {   font-family: 'Montserrat', sans-serif;   font-size: 10px;   color: #fff;   background-color: #023020;       text-shadow: 2px 2px #333;   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
+</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_supprimerO">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>440</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {   font-family: 'Montserrat', sans-serif;   font-size: 10px;   color: #fff;   background-color: #023020;   border-radius: 10px;   padding: 20px;   text-shadow: 2px 2px #333;   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
+</string>
+    </property>
+    <property name="text">
+     <string>SUPPRIMER</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_experience">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>300</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {   font-family: 'Montserrat', sans-serif;   font-size: 10px;   color: #fff;   background-color: #023020;       text-shadow: 2px 2px #333;   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
+</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_ajoutrO">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>400</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {   font-family: 'Montserrat', sans-serif;   font-size: 10px;   color: #fff;   background-color: #023020;   border-radius: 10px;   padding: 20px;   text-shadow: 2px 2px #333;   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
+</string>
+    </property>
+    <property name="text">
+     <string>AJOUTER</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>300</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {   font-family: 'Montserrat', sans-serif;   font-size: 10px;   color: #fff;   background-color: #5F585F;     padding: 20px;   text-shadow: 2px 2px #333;   box-shadow: 5px 5px 10px rgba(0, 0, 0, 1); }
+
+</string>
+    </property>
+    <property name="text">
+     <string>EXPERIENCE</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_type">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>100</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {   font-family: 'Montserrat', sans-serif;   font-size: 10px;   color: #fff;   background-color: #023020;       text-shadow: 2px 2px #333;   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
+</string>
+    </property>
+   </widget>
+   <widget class="QDateEdit" name="dateEdit">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>350</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    color: #fff;
+    background-color: #023020;
+    border-radius: 10px;
+    padding: 20px;
+    text-shadow: 2px 2px #333;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+
+    border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+}
+
+QComboBox::down-arrow {
+    image: url(down-arrow.png);
+}
+</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_salaire">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>250</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {   font-family: 'Montserrat', sans-serif;   font-size: 10px;   color: #fff;   background-color: #023020;       text-shadow: 2px 2px #333;   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
+</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="posteV_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>200</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {   font-family: 'Montserrat', sans-serif;   font-size: 10px;   color: #fff;   background-color: #5F585F;     padding: 20px;   text-shadow: 2px 2px #333;   box-shadow: 5px 5px 10px rgba(0, 0, 0, 1); }
+
+</string>
+    </property>
+    <property name="text">
+     <string>POSTS VACANTS</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_nomE">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>150</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {   font-family: 'Montserrat', sans-serif;   font-size: 10px;   color: #fff;   background-color: #023020;       text-shadow: 2px 2px #333;   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
+</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_ID">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>50</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {   font-family: 'Montserrat', sans-serif;   font-size: 10px;   color: #fff;   background-color: #023020;       text-shadow: 2px 2px #333;   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
+</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="nomE_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>150</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {   font-family: 'Montserrat', sans-serif;   font-size: 10px;   color: #fff;   background-color: #5F585F;     padding: 20px;   text-shadow: 2px 2px #333;   box-shadow: 5px 5px 10px rgba(0, 0, 0, 1); }
+
+</string>
+    </property>
+    <property name="text">
+     <string>NOM D'ENTREPRISE</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_confirmer">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>440</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {   font-family: 'Montserrat', sans-serif;   font-size: 10px;   color: #fff;   background-color: #023020;   border-radius: 10px;   padding: 20px;   text-shadow: 2px 2px #333;   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
+</string>
+    </property>
+    <property name="text">
+     <string>CONFIRMER</string>
+    </property>
+   </widget>
+   <widget class="QTableView" name="tableView">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>20</y>
+      <width>691</width>
+      <height>281</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTableView {
+    background-color: #023020;
+    color: #fff;
+    gridline-color: #fff;
+}
+
+QTableView::item:selected {
+    background-color: #046c4e;
+    color: #fff;
+}</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>350</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {   font-family: 'Montserrat', sans-serif;   font-size: 10px;   color: #fff;   background-color: #5F585F;     padding: 20px;   text-shadow: 2px 2px #333;   box-shadow: 5px 5px 10px rgba(0, 0, 0, 1); }
+
+</string>
+    </property>
+    <property name="text">
+     <string> DATE D'EXPIRATION</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>250</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {   font-family: 'Montserrat', sans-serif;   font-size: 10px;   color: #fff;   background-color: #5F585F;     padding: 20px;   text-shadow: 2px 2px #333;   box-shadow: 5px 5px 10px rgba(0, 0, 0, 1); }
+
+</string>
+    </property>
+    <property name="text">
+     <string>SALAIRE</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="type_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>100</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {   font-family: 'Montserrat', sans-serif;   font-size: 10px;   color: #fff;   background-color: #5F585F;     padding: 20px;   text-shadow: 2px 2px #333;   box-shadow: 5px 5px 10px rgba(0, 0, 0, 1); }
+
+
+</string>
+    </property>
+    <property name="text">
+     <string>  TYPE</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="idF">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {   font-family: 'Montserrat', sans-serif;   font-size: 10px;   color: #fff;   background-color: #5F585F;     padding: 20px;   text-shadow: 2px 2px #333;   box-shadow: 5px 5px 10px rgba(0, 0, 0, 1); }
+
+</string>
+    </property>
+    <property name="text">
+     <string>      ID</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1306</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
