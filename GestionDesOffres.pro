@@ -28,17 +28,22 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     connexion.cpp \
+    deletebuttondelegate.cpp \
+    mailling.cpp \
     main.cpp \
     gesoff.cpp \
     offre.cpp
 
 HEADERS += \
     connexion.h \
+    deletebuttondelegate.h \
     gesoff.h \
+    mailling.h \
     offre.h
 
 FORMS += \
-    gesoff.ui
+    gesoff.ui \
+    mailling.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

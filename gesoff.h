@@ -42,6 +42,22 @@ private slots:
 
     void on_pushButton_confirmer_clicked();
 
+    void on_pushButton_rechercheO_clicked();
+
+    void on_pushButton_triO_clicked();
+
+    void on_pushButton_PDFF_clicked();
+
+    void on_pushButton_stats_clicked();
+
+    void ComboBox_RnomP();
+
+    void on_pushButton_refresh_clicked();
+
+    void onDeleteButtonClicked(const QModelIndex &index);
+
+    void setupTableView();
+
 private:
     Ui::GesOff *ui;
     offre of;

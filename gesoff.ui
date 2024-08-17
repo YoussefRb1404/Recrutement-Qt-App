@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1306</width>
-    <height>648</height>
+    <width>1486</width>
+    <height>682</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>400</y>
+      <y>440</y>
       <width>151</width>
       <height>31</height>
      </rect>
@@ -35,7 +35,7 @@
     <property name="geometry">
      <rect>
       <x>170</x>
-      <y>200</y>
+      <y>250</y>
       <width>181</width>
       <height>31</height>
      </rect>
@@ -49,7 +49,7 @@
     <property name="geometry">
      <rect>
       <x>170</x>
-      <y>440</y>
+      <y>480</y>
       <width>181</width>
       <height>31</height>
      </rect>
@@ -66,7 +66,7 @@
     <property name="geometry">
      <rect>
       <x>170</x>
-      <y>300</y>
+      <y>350</y>
       <width>181</width>
       <height>31</height>
      </rect>
@@ -80,7 +80,7 @@
     <property name="geometry">
      <rect>
       <x>170</x>
-      <y>400</y>
+      <y>440</y>
       <width>181</width>
       <height>31</height>
      </rect>
@@ -97,7 +97,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>300</y>
+      <y>350</y>
       <width>141</width>
       <height>31</height>
      </rect>
@@ -129,7 +129,7 @@
     <property name="geometry">
      <rect>
       <x>170</x>
-      <y>350</y>
+      <y>400</y>
       <width>181</width>
       <height>31</height>
      </rect>
@@ -168,7 +168,7 @@ QComboBox::down-arrow {
     <property name="geometry">
      <rect>
       <x>170</x>
-      <y>250</y>
+      <y>300</y>
       <width>181</width>
       <height>31</height>
      </rect>
@@ -182,7 +182,7 @@ QComboBox::down-arrow {
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>200</y>
+      <y>250</y>
       <width>141</width>
       <height>31</height>
      </rect>
@@ -246,7 +246,7 @@ QComboBox::down-arrow {
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>440</y>
+      <y>480</y>
       <width>151</width>
       <height>31</height>
      </rect>
@@ -264,7 +264,7 @@ QComboBox::down-arrow {
      <rect>
       <x>400</x>
       <y>20</y>
-      <width>691</width>
+      <width>971</width>
       <height>281</height>
      </rect>
     </property>
@@ -285,7 +285,7 @@ QTableView::item:selected {
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>350</y>
+      <y>400</y>
       <width>141</width>
       <height>31</height>
      </rect>
@@ -303,7 +303,7 @@ QTableView::item:selected {
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>250</y>
+      <y>300</y>
       <width>141</width>
       <height>31</height>
      </rect>
@@ -354,13 +354,307 @@ QTableView::item:selected {
      <string>      ID</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_rechercheO">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>520</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {   font-family: 'Montserrat', sans-serif;   font-size: 10px;   color: #fff;   background-color: #023020;   border-radius: 10px;   padding: 20px;   text-shadow: 2px 2px #333;   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
+</string>
+    </property>
+    <property name="text">
+     <string>RECHERCHE</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_triO">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>560</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    color: #fff;
+    background-color: #023020;
+    border-radius: 10px;
+    padding: 20px;
+    text-shadow: 2px 2px #333;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+
+    border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+}
+
+QComboBox::down-arrow {
+    image: url(down-arrow.png);
+}
+</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>salaireH</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>salaireB</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>IdD</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>IdA</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>type A..Z</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>type Z..A</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>nomE A..Z</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>nomE Z..A</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>postesVA</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>postesVD</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>nomP A..Z</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>nomP Z..A</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="pushButton_triO">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>560</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {   font-family: 'Montserrat', sans-serif;   font-size: 10px;   color: #fff;   background-color: #023020;   border-radius: 10px;   padding: 20px;   text-shadow: 2px 2px #333;   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
+</string>
+    </property>
+    <property name="text">
+     <string>TRI</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_nomP">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>200</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {   font-family: 'Montserrat', sans-serif;   font-size: 10px;   color: #fff;   background-color: #023020;       text-shadow: 2px 2px #333;   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="nomE_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>200</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {   font-family: 'Montserrat', sans-serif;   font-size: 10px;   color: #fff;   background-color: #5F585F;     padding: 20px;   text-shadow: 2px 2px #333;   box-shadow: 5px 5px 10px rgba(0, 0, 0, 1); }
+
+</string>
+    </property>
+    <property name="text">
+     <string>NOM DU POSTE</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_PDFF">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>470</y>
+      <width>151</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {   font-family: 'Montserrat', sans-serif;   font-size: 10px;   color: #fff;   background-color: #023020;   border-radius: 10px;   padding: 20px;   text-shadow: 2px 2px #333;   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
+</string>
+    </property>
+    <property name="text">
+     <string>PDF</string>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="graphicsView">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>310</y>
+      <width>401</width>
+      <height>321</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_stats">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>330</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {   font-family: 'Montserrat', sans-serif;   font-size: 10px;   color: #fff;   background-color: #023020;   border-radius: 10px;   padding: 20px;   text-shadow: 2px 2px #333;   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
+</string>
+    </property>
+    <property name="text">
+     <string>stats</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_nomE">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>380</y>
+      <width>70</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>nomE</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_nomP">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>380</y>
+      <width>70</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>nomP</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_RnomP">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>520</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    color: #fff;
+    background-color: #023020;
+    border-radius: 10px;
+    padding: 20px;
+    text-shadow: 2px 2px #333;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+
+    border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+}
+
+QComboBox::down-arrow {
+    image: url(down-arrow.png);
+}
+</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_refresh">
+    <property name="geometry">
+     <rect>
+      <x>1120</x>
+      <y>370</y>
+      <width>151</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {   font-family: 'Montserrat', sans-serif;   font-size: 10px;   color: #fff;   background-color: #023020;   border-radius: 10px;   padding: 20px;   text-shadow: 2px 2px #333;   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
+</string>
+    </property>
+    <property name="text">
+     <string>RAFRAICHIR</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1306</width>
+     <width>1486</width>
      <height>22</height>
     </rect>
    </property>
