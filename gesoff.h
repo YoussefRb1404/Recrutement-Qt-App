@@ -18,6 +18,9 @@
 #include <QPrinter>
 #include <QPainter>
 #include <QFileDialog>
+#include <QSortFilterProxyModel>
+#include <QCalendarWidget>
+
 
 #include "offre.h"
 
@@ -40,8 +43,6 @@ private slots:
 
     void on_pushButton_modifierO_clicked();
 
-    void on_pushButton_confirmer_clicked();
-
     void on_pushButton_rechercheO_clicked();
 
     void on_pushButton_triO_clicked();
@@ -56,7 +57,15 @@ private slots:
 
     void onDeleteButtonClicked(const QModelIndex &index);
 
-    void setupTableView();
+    void on_pushButton_Mailling_clicked();
+
+    void on_tableView_clicked(const QModelIndex &index);
+
+    void show_tables();
+
+    void on_tableView_doubleClicked(const QModelIndex &index);
+
+    void marquerJoursExpiration(QCalendarWidget *calendrier);
 
 private:
     Ui::GesOff *ui;
@@ -65,6 +74,10 @@ private:
     QtCharts::QPieSeries *PieSeries;
     QtCharts::QChartView *ChartView;
     void rechercherOffreParId(int id);
+    int selected;
+    offre tmp;
+    QSortFilterProxyModel *proxy;
+
 };
 
 #endif // GESOFF_H

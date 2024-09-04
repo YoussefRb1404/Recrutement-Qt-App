@@ -27,7 +27,8 @@
 #include <QChart>
 #include <QPieSlice>
 #include <QChartView>
-#include "deletebuttondelegate.h"
+#include "mailling.h"
+#include "notification.h"
 
 QT_CHARTS_USE_NAMESPACE
 
@@ -53,11 +54,8 @@ GesOff::GesOff(QWidget *parent)
 
     connect(ui->pushButton_modifierO, &QPushButton::clicked, this, &GesOff::on_pushButton_modifierO_clicked);
      ComboBox_RnomP();
-     DeleteButtonDelegate *deleteButtonDelegate = new DeleteButtonDelegate(this);
-        ui->tableView->setItemDelegateForColumn(8, deleteButtonDelegate); // 6 est l'index de la colonne du bouton
+     marquerJoursExpiration(ui->calendarWidget);
 
-        // Connecter le signal du délégué à la fonction de suppression
-        connect(deleteButtonDelegate, &DeleteButtonDelegate::deleteButtonClicked, this, &GesOff::onDeleteButtonClicked);
 
 
 
@@ -117,18 +115,10 @@ void GesOff::on_pushButton_ajoutrO_clicked()
         // Refresh the table view with the new data
         ui->tableView->setModel(of.afficher());
 
-        // Set column headers if using QStandardItemModel
-        if (QStandardItemModel *model = qobject_cast<QStandardItemModel*>(ui->tableView->model())) {
-            model->setHorizontalHeaderLabels({"ID", "Type", "NomE", "NomP", "PosteV", "Salaire", "Experience", "Date", "Action"});
-            setupTableView();
-        }
-
-        // Set the delete button delegate for the "Action" column (index 8)
-        DeleteButtonDelegate *delegate = new DeleteButtonDelegate(this);
-        ui->tableView->setItemDelegateForColumn(8, delegate);
 
         // Show a success message
         QMessageBox::information(this, "Succès", "Offre ajoutée avec succès.");
+
 
         // Clear the input fields
         ui->lineEdit_ID->clear();
@@ -153,38 +143,113 @@ void GesOff::on_pushButton_ajoutrO_clicked()
 
 
 
+
 void GesOff::on_pushButton_supprimerO_clicked()
 {
-    QString id = ui->lineEdit_ID->text();
-
-    // Check if ID exists before deletion
-    QSqlQuery query;
-    query.prepare("SELECT * FROM OFFRES WHERE ido = :id");
-    query.bindValue(":id", id);
-    query.exec();
-
-    if (!query.next()) {
-        QMessageBox::warning(this, "ID Non Trouvé", "Cet ID n'existe pas dans la base de données.");
-        ui->lineEdit_ID->clear();
+    if (selected == 0)
+    {
+        QMessageBox::warning(this, "Suppression", "Aucune offre sélectionnée pour suppression.");
         return;
     }
 
-    if (of.supprimer(id)) {
-        ui->tableView->setModel(of.afficher());
-        QMessageBox::information(this, "Succès", "Offre supprimée avec succès.");
-        ui->lineEdit_ID->clear();
-    } else {
-        QMessageBox::critical(this, "Erreur", "Échec de la suppression de l'offre.");
+    // Confirmation avant la suppression
+    QMessageBox::StandardButton reply;
+    reply = QMessageBox::question(this, "Suppression", "Êtes-vous sûr de vouloir supprimer cette offre?",
+                                  QMessageBox::Yes | QMessageBox::No);
+
+    if (reply == QMessageBox::Yes)
+    {
+        offre o;
+        QString idString = QString::number(selected);
+
+          // Appeler la méthode 'supprimer' avec la QString convertie
+
+        if (o.supprimer(idString))
+        {
+            show_tables();
+
+            QMessageBox::information(this, "Suppression", "L'offre a été supprimée avec succès.");
+        }
+        else
+        {
+            QMessageBox::warning(this, "Erreur", "La suppression a échoué.");
+        }
+
+        // Refresh du tableau pour afficher les données mises à jour
+
     }
+
+    // Réinitialisation du champ sélectionné
+    selected = 0;
+}
+void GesOff::on_tableView_doubleClicked(const QModelIndex &index)
+{
+
+    // Récupérer l'ID du candidat à partir de la cellule double-cliquée
+    QSqlQueryModel* model = qobject_cast<QSqlQueryModel*>(ui->tableView->model());
+    if (!model) {
+        qWarning() << "Le modèle de la vue n'est pas un QSqlQueryModel.";
+        return;
+    }
+
+    // On suppose que l'ID est dans la première colonne (index 0)
+    int id = model->data(model->index(index.row(), 0)).toInt();
+
+    // Appeler la méthode pour rechercher le candidat par ID
+    rechercherOffreParId(id);
+
+    // Rendre le champ ID en lecture seule
+    ui->lineEdit_ID->setReadOnly(true);
 }
 
 
 
 
 void GesOff::on_pushButton_modifierO_clicked() {
-    int id= ui->lineEdit_ID->text().toInt();
-       rechercherOffreParId(id);
-        ui->lineEdit_ID->setReadOnly(true);
+
+
+
+    // Récupérez les valeurs des autres champs
+    QString type = ui->lineEdit_type->text();
+    QString nomE = ui->lineEdit_nomE->text();
+    QString nomP = ui->lineEdit_nomP->text();
+    float posteV = ui->lineEdit_posteV->text().toFloat();
+    float salaire = ui->lineEdit_salaire->text().toFloat();
+    QString experience = ui->lineEdit_experience->text();
+    QDate dateE = ui->dateEdit->date();
+
+    // Obtenez la valeur de l'ID
+    int id = ui->lineEdit_ID->text().toInt();
+
+    // Créez un objet Offre avec les nouvelles données
+    offre o(id, type, nomE, nomP, posteV, salaire, experience, dateE);
+
+    // Appelez la méthode de modification
+    bool test = o.modifier();
+
+    if (test) {
+        // Actualisez le modèle affiché dans la vue
+        ui->tableView->setModel(of.afficher());
+
+        // Affichez un message de succès
+        QMessageBox::information(this, "Succès", "Offre mise à jour avec succès.");
+    } else {
+        // Affichez un message d'erreur
+        QMessageBox::warning(this, "Erreur", "Échec de la mise à jour de l'offre dans la base de données.");
+    }
+
+
+
+    // Nettoyez les champs après la modification
+    ui->lineEdit_ID->clear();
+    ui->lineEdit_type->clear();
+    ui->lineEdit_nomE->clear();
+    ui->lineEdit_nomP->clear();
+    ui->lineEdit_posteV->clear();
+    ui->lineEdit_salaire->clear();
+    ui->lineEdit_experience->clear();
+    ui->dateEdit->setDate(QDate::currentDate());
+    ui->lineEdit_ID->setReadOnly(false);
 }
 
 void GesOff::rechercherOffreParId(int id) {
@@ -219,53 +284,7 @@ void GesOff::rechercherOffreParId(int id) {
 
 
 
-void GesOff::on_pushButton_confirmer_clicked()
-{
 
-
-
-     // Récupérez les valeurs des autres champs
-     QString type = ui->lineEdit_type->text();
-     QString nomE = ui->lineEdit_nomE->text();
-     QString nomP = ui->lineEdit_nomP->text();
-     float posteV = ui->lineEdit_posteV->text().toFloat();
-     float salaire = ui->lineEdit_salaire->text().toFloat();
-     QString experience = ui->lineEdit_experience->text();
-     QDate dateE = ui->dateEdit->date();
-
-     // Obtenez la valeur de l'ID
-     int id = ui->lineEdit_ID->text().toInt();
-
-     // Créez un objet Offre avec les nouvelles données
-     offre o(id, type, nomE, nomP, posteV, salaire, experience, dateE);
-
-     // Appelez la méthode de modification
-     bool test = o.modifier();
-
-     if (test) {
-         // Actualisez le modèle affiché dans la vue
-         ui->tableView->setModel(of.afficher());
-         // Affichez un message de succès
-         QMessageBox::information(this, "Succès", "Offre mise à jour avec succès.");
-     } else {
-         // Affichez un message d'erreur
-         QMessageBox::warning(this, "Erreur", "Échec de la mise à jour de l'offre dans la base de données.");
-     }
-
-     // Réinitialisez le bouton à son état initial
-     ui->pushButton_modifierO->setText("Modifier");
-
-     // Nettoyez les champs après la modification
-     ui->lineEdit_ID->clear();
-     ui->lineEdit_type->clear();
-     ui->lineEdit_nomE->clear();
-     ui->lineEdit_nomP->clear();
-     ui->lineEdit_posteV->clear();
-     ui->lineEdit_salaire->clear();
-     ui->lineEdit_experience->clear();
-     ui->dateEdit->setDate(QDate::currentDate());
-     ui->lineEdit_ID->setReadOnly(false);
-}
 
 void GesOff::on_pushButton_rechercheO_clicked() {
     QString selectedNomP = ui->comboBox_RnomP->currentText();
@@ -491,14 +510,7 @@ void GesOff::on_pushButton_refresh_clicked()
       ui->tableView->setModel(of.afficher());
 }
 
-void GesOff::setupTableView()
-{
-    // Assuming your table view is already set up and displaying data
-    DeleteButtonDelegate *delegate = new DeleteButtonDelegate(this);
-    ui->tableView->setItemDelegateForColumn(8, delegate); // 8 is the index of the delete button column
 
-    connect(delegate, &DeleteButtonDelegate::deleteButtonClicked, this, &GesOff::onDeleteButtonClicked);
-}
 
 // Slot to handle delete button click
 void GesOff::onDeleteButtonClicked(const QModelIndex &index)
@@ -519,9 +531,91 @@ void GesOff::onDeleteButtonClicked(const QModelIndex &index)
 
 
 
+// Assuming the Mailling window class is named 'Mailling'
+void GesOff::on_pushButton_Mailling_clicked()
+{
+    // Create an instance of the Mailling window
+    Mailling *mailWindow = new Mailling(this);
+
+    // Show the Mailling window
+    mailWindow->show();
+}
+
+void GesOff::show_tables(){
+//creation model (masque du tableau) : permet recherche et tri
+    proxy = new QSortFilterProxyModel();
+
+ //definir la source (tableau original)
+    proxy->setSourceModel(tmp.afficher());
+
+ //pour la recherche
+    proxy->setFilterCaseSensitivity(Qt::CaseInsensitive); // S=s (pas de difference entre majiscule et miniscule)
+    proxy->setFilterKeyColumn(-1); // chercher dans tout le tableau (-1) ou donner le numero de la colone
+   //remplissage tableau avec le masque
+    ui->tableView->setModel(proxy);
+
+}
+
+void GesOff::on_tableView_clicked(const QModelIndex &index)
+{
+    // Obtenir la valeur du premier champ (ID) de la ligne sélectionnée.
+    selected = ui->tableView->model()->data(ui->tableView->model()->index(index.row(), 0)).toInt();
+}
 
 
+void GesOff::marquerJoursExpiration(QCalendarWidget *calendrier) {
+    // Fetch expiration dates, job titles, and company names from the database
+    QSqlQuery query;
+    QMap<QDate, QPair<QString, QString>> joursExpiration; // Use QPair to store both nomP and nomE
 
+    // Query the database to get expiration dates and corresponding job titles and company names
+    if (query.exec("SELECT dateE, nomP, nomE FROM OFFRES")) {
+        while (query.next()) {
+            QDate dateE = query.value(0).toDate();
+            QString nomP = query.value(1).toString();
+            QString nomE = query.value(2).toString();
+            joursExpiration.insert(dateE, qMakePair(nomP, nomE));  // Store dateE with nomP and nomE in the map
+            qDebug() << "DateE fetched:" << dateE.toString() << "NomP:" << nomP << "NomE:" << nomE; // Debug: Log the date, job title, and company name
+        }
+    } else {
+        qDebug() << "Database query failed: " << query.lastError().text();
+        return;
+    }
 
+    // Apply the style (red background) to the expiration dates in the calendar
+    QTextCharFormat format;
+    format.setBackground(QBrush(QColor("red")));  // Set the background color to red
 
+    // Debug: Ensure the calendar widget is valid
+    if (!calendrier) {
+        qDebug() << "Calendar widget is null";
+        return;
+    }
 
+    // Highlight dates
+    for (auto it = joursExpiration.begin(); it != joursExpiration.end(); ++it) {
+        QDate jourExpiration = it.key();
+        qDebug() << "Highlighting Date:" << jourExpiration.toString(); // Debug: Log the highlighted date
+        calendrier->setDateTextFormat(jourExpiration, format);
+    }
+
+    // Force the calendar to update and repaint
+    calendrier->update();
+
+    // Ensure the calendar is set to single selection mode
+    calendrier->setSelectionMode(QCalendarWidget::SingleSelection);
+
+    // Connect the selectionChanged signal to display the job title and company name in a QMessageBox when an expiration date is clicked
+    connect(calendrier, &QCalendarWidget::selectionChanged, [=]() {
+        QDate selectedDate = calendrier->selectedDate();
+        if (joursExpiration.contains(selectedDate)) {
+            QString nomP = joursExpiration.value(selectedDate).first;  // Get job title
+            QString nomE = joursExpiration.value(selectedDate).second; // Get company name
+            QMessageBox::information(this, "Job Information", "Job Title: " + nomP + "\nCompany Name: " + nomE);
+            qDebug() << "Selected Date:" << selectedDate.toString() << "NomP:" << nomP << "NomE:" << nomE; // Debug: Log the selected date, job title, and company name
+        } else {
+            QMessageBox::information(this, "Job Information", "No expiration date selected.");
+            qDebug() << "Selected Date (no expiration):" << selectedDate.toString(); // Debug: Log non-expiration date selections
+        }
+    });
+}

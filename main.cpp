@@ -1,7 +1,9 @@
 #include "gesoff.h"
+#include "login.h"
 #include "connexion.h"
 #include <QMessageBox>
 #include <QApplication>
+#include "options.h"
 
 int main(int argc, char *argv[])
 {
@@ -10,8 +12,10 @@ int main(int argc, char *argv[])
     connexion c;
     bool test=c.createconnect();
     GesOff f;
+    login l;
+    options op;
     if(test)
-    {f.show();
+    {op.show();
         QMessageBox::information(nullptr, QObject::tr("database is open"),
                     QObject::tr("connection successful.\n"
                                 "Click Cancel to exit."), QMessageBox::Cancel);

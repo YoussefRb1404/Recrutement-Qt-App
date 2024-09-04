@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>login</class>
+ <widget class="QMainWindow" name="login">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Login</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLineEdit" name="lineEdit_mdp">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>290</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+background-color: rgb(209, 174, 254);
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="placeholderText">
+     <string>   Tapez votre mot de passe</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="type_2">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>200</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {   font-family: 'Montserrat', sans-serif;   font-size: 10px;   color: #fff;   background-color: #5F585F;     padding: 20px;   text-shadow: 2px 2px #333;   box-shadow: 5px 5px 10px rgba(0, 0, 0, 1); }
+
+
+</string>
+    </property>
+    <property name="text">
+     <string>MDP</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_ID">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>240</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+background-color: rgb(209, 174, 254);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="placeholderText">
+     <string>     Tapez votre identifiant</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="idF">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>150</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {   font-family: 'Montserrat', sans-serif;   font-size: 10px;   color: #fff;   background-color: #5F585F;     padding: 20px;   text-shadow: 2px 2px #333;   box-shadow: 5px 5px 10px rgba(0, 0, 0, 1); }
+
+</string>
+    </property>
+    <property name="text">
+     <string>      ID</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_login">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>340</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {   font-family: 'Montserrat', sans-serif;   font-size: 10px;   color: #fff;   background-color: #023020;   border-radius: 10px;   padding: 20px;   text-shadow: 2px 2px #333;   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); 
+background-color: rgb(83, 72, 176);}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="youssef.qrc">
+      <normaloff>:/login_13707390.png</normaloff>:/login_13707390.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>60</width>
+      <height>60</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>-5</x>
+      <y>-15</y>
+      <width>811</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="youssef.qrc">:/loginY.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="wordWrap">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <zorder>type_2</zorder>
+   <zorder>idF</zorder>
+   <zorder>label</zorder>
+   <zorder>lineEdit_mdp</zorder>
+   <zorder>lineEdit_ID</zorder>
+   <zorder>pushButton_login</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="youssef.qrc"/>
+ </resources>
+ <connections/>
+</ui>

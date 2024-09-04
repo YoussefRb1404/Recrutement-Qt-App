@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.11.0, 2024-08-31T14:05:07. -->
+<!-- Written by QtCreator 4.11.0, 2024-08-18T19:21:13. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -58,8 +58,7 @@
    <valuelist type="QVariantList" key="ClangCodeModel.CustomCommandLineKey">
     <value type="QString">-fno-delayed-template-parsing</value>
    </valuelist>
-   <value type="bool" key="ClangCodeModel.UseGlobalConfig">false</value>
-   <value type="QString" key="ClangCodeModel.WarningConfigId">{f56c711f-c999-43cf-ac68-de2df4940eba}</value>
+   <value type="bool" key="ClangCodeModel.UseGlobalConfig">true</value>
   </valuemap>
  </data>
  <data>
@@ -288,8 +287,8 @@
     </valuelist>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:D:/Qt/projects/wetransfer_gestiondesoffres_2024-08-19_1103/GestionDesOffres/GestionDesOffres.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">D:/Qt/projects/wetransfer_gestiondesoffres_2024-08-19_1103/GestionDesOffres/GestionDesOffres.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Users/hp/Documents/GestionDesOffres/GestionDesOffres.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/hp/Documents/GestionDesOffres/GestionDesOffres.pro</value>
     <value type="QString" key="RunConfiguration.Arguments"></value>
     <value type="bool" key="RunConfiguration.Arguments.multi">false</value>
     <value type="QString" key="RunConfiguration.OverrideDebuggerStartup"></value>

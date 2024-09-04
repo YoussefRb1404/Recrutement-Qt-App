@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/">
+        <file>loginY.png</file>
+        <file>icon_connecter.png</file>
+        <file>search_13707410.png</file>
+        <file>send_13707414.png</file>
+        <file>add_13707430.png</file>
+        <file>cancel_13707424.png</file>
+        <file>updated_13707432.png</file>
+        <file>upload_13707408.png</file>
+        <file>login_13707390.png</file>
+        <file>job-seeker_17030876.png</file>
+        <file>choose_8909286.png</file>
+        <file>backgroundOptions.png</file>
+        <file>background.png</file>
+        <file>background1.png</file>
+        <file>background2.png</file>
+        <file>sort.png</file>
+        <file>pdf .png</file>
+        <file>stat.png</file>
+        <file>exel.png</file>
+        <file>email_13707426.png</file>
+        <file>backgroundMailing.png</file>
+    </qresource>
+</RCC>
