@@ -184,6 +184,35 @@
      <bool>true</bool>
     </property>
    </widget>
+   <widget class="QPushButton" name="pb_back3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>0</y>
+      <width>91</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {   font-family: 'Montserrat', sans-serif;   font-size: 10px;   color: #fff;   background-color: #023020;   border-radius: 10px;   padding: 20px;   text-shadow: 2px 2px #333;   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); 
+
+background-color: rgb(205, 171, 247);}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="youssef.qrc">
+      <normaloff>:/arrow_391888.png</normaloff>:/arrow_391888.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
    <zorder>label</zorder>
    <zorder>sendBtn_2</zorder>
    <zorder>uname_2</zorder>
@@ -193,6 +222,7 @@
    <zorder>rcpt_2</zorder>
    <zorder>msg_2</zorder>
    <zorder>browseBtn_2</zorder>
+   <zorder>pb_back3</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -200,7 +230,7 @@
      <x>0</x>
      <y>0</y>
      <width>862</width>
-     <height>26</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

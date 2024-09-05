@@ -1,5 +1,6 @@
 #include "gesoff.h"
 #include "ui_gesoff.h"
+#include "options.h"
 
 #include <QtWidgets>
 #include <QTableWidget>
@@ -619,3 +620,10 @@ void GesOff::marquerJoursExpiration(QCalendarWidget *calendrier) {
         }
     });
 }
+void GesOff::on_pb_back1_clicked()
+ {
+     options *E = new options;
+     E ->show();
+     hide();
+
+ }

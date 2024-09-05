@@ -68,6 +68,7 @@ private slots:
     void on_pushButtonDesarchiver_clicked();
 
     void on_pushButton_camera_clicked();
+    void on_pb_back_clicked();
 
 private:
     Ui::GesCond *ui;

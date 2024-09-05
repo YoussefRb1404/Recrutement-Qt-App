@@ -1,4 +1,5 @@
 #include "camera.h"
+#include "options.h"
 #include "ui_camera.h"
 #include <QCameraInfo>  // Ensure this is included
 
@@ -56,4 +57,11 @@ void camera::on_takeImageButton_clicked()
 {
     isCapturingImage = true;
     imageCapture->capture();
+}
+void camera::on_pb_back2_clicked()
+{
+    options *m = new options;
+    m ->show();
+    hide();
+
 }

@@ -38,6 +38,7 @@ private:
     void sendMail();
     void mailSent(QString);
     void browse();
+    void on_pb_back3_clicked();
 
 
      QStringList files;

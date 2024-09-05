@@ -17,8 +17,8 @@
    <widget class="QPushButton" name="pushButton_modifierC">
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>480</y>
+      <x>150</x>
+      <y>470</y>
       <width>111</width>
       <height>91</height>
      </rect>
@@ -84,10 +84,10 @@ QComboBox::down-arrow {
    <widget class="QPushButton" name="pushButton_refresh">
     <property name="geometry">
      <rect>
-      <x>1230</x>
-      <y>30</y>
-      <width>151</width>
-      <height>51</height>
+      <x>1210</x>
+      <y>0</y>
+      <width>191</width>
+      <height>71</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -100,12 +100,12 @@ background-color: rgb(205, 171, 247);}</string>
     </property>
     <property name="icon">
      <iconset resource="youssef.qrc">
-      <normaloff>:/upload_13707408.png</normaloff>:/upload_13707408.png</iconset>
+      <normaloff>:/refresh_4123673.png</normaloff>:/refresh_4123673.png</iconset>
     </property>
     <property name="iconSize">
      <size>
-      <width>65</width>
-      <height>65</height>
+      <width>45</width>
+      <height>45</height>
      </size>
     </property>
    </widget>
@@ -133,7 +133,7 @@ background-color: rgb(205, 171, 247);}
     <property name="geometry">
      <rect>
       <x>270</x>
-      <y>480</y>
+      <y>470</y>
       <width>121</width>
       <height>91</height>
      </rect>
@@ -222,7 +222,7 @@ background-color: rgb(205, 171, 247);}
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">
@@ -249,9 +249,9 @@ background-color: rgb(205, 171, 247);}
      <widget class="QGraphicsView" name="graphicsView">
       <property name="geometry">
        <rect>
-        <x>410</x>
+        <x>310</x>
         <y>10</y>
-        <width>431</width>
+        <width>531</width>
         <height>321</height>
        </rect>
       </property>
@@ -287,29 +287,34 @@ background-color: rgb(98, 70, 137);}
     </widget>
     <widget class="QWidget" name="Archive_2">
      <attribute name="title">
-      <string>Page</string>
+      <string>l'archive</string>
      </attribute>
-     <widget class="QPushButton" name="pushButtonDesarchiver">
-      <property name="geometry">
-       <rect>
-        <x>80</x>
-        <y>120</y>
-        <width>101</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Désarchiver</string>
-      </property>
-     </widget>
      <widget class="QTableView" name="table">
       <property name="geometry">
        <rect>
-        <x>350</x>
-        <y>50</y>
-        <width>441</width>
-        <height>191</height>
+        <x>10</x>
+        <y>10</y>
+        <width>871</width>
+        <height>261</height>
        </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonDesarchiver">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>280</y>
+        <width>131</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {   font-family: 'Montserrat', sans-serif;   font-size: 15px;   color: #fff;   background-color: #023020;   border-radius: 10px;   padding: 20px;   text-shadow: 2px 2px #333;   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); 
+background-color: rgb(98, 70, 137);}
+</string>
+      </property>
+      <property name="text">
+       <string>Désarchiver</string>
       </property>
      </widget>
     </widget>
@@ -334,9 +339,9 @@ background-color: rgb(98, 70, 137);}
     <property name="geometry">
      <rect>
       <x>170</x>
-      <y>480</y>
-      <width>121</width>
-      <height>91</height>
+      <y>550</y>
+      <width>71</width>
+      <height>71</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -349,12 +354,12 @@ background-color: rgb(98, 70, 137);}
     </property>
     <property name="icon">
      <iconset resource="youssef.qrc">
-      <normaloff>:/cancel_13707424.png</normaloff>:/cancel_13707424.png</iconset>
+      <normaloff>:/trash_6990104 (1).png</normaloff>:/trash_6990104 (1).png</iconset>
     </property>
     <property name="iconSize">
      <size>
-      <width>65</width>
-      <height>65</height>
+      <width>50</width>
+      <height>50</height>
      </size>
     </property>
    </widget>
@@ -528,8 +533,8 @@ QComboBox::down-arrow {
    <widget class="QPushButton" name="pushButton_excel">
     <property name="geometry">
      <rect>
-      <x>1270</x>
-      <y>530</y>
+      <x>1260</x>
+      <y>550</y>
       <width>91</width>
       <height>71</height>
      </rect>
@@ -596,8 +601,8 @@ background-color: rgb(205, 171, 247);}
    <widget class="QPushButton" name="pushButton_ajoutrC">
     <property name="geometry">
      <rect>
-      <x>-20</x>
-      <y>480</y>
+      <x>20</x>
+      <y>470</y>
       <width>121</width>
       <height>91</height>
      </rect>
@@ -635,19 +640,6 @@ background-color: rgb(98, 70, 137);}
 
 
 </string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_ArchiverC">
-    <property name="geometry">
-     <rect>
-      <x>490</x>
-      <y>450</y>
-      <width>111</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Archiver</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
@@ -732,14 +724,75 @@ background-color: rgb(205, 171, 247);}
    <widget class="QPushButton" name="pushButton_camera">
     <property name="geometry">
      <rect>
-      <x>624</x>
-      <y>452</y>
-      <width>131</width>
+      <x>470</x>
+      <y>450</y>
+      <width>151</width>
       <height>71</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {   font-family: 'Montserrat', sans-serif;   font-size: 10px;   color: #fff;   background-color: #023020;   border-radius: 10px;   padding: 20px;   text-shadow: 2px 2px #333;   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); 
+
+background-color: rgb(205, 171, 247);}</string>
+    </property>
     <property name="text">
-     <string>camera</string>
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="youssef.qrc">
+      <normaloff>:/camera_6286759.png</normaloff>:/camera_6286759.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>50</width>
+      <height>50</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pb_back">
+    <property name="geometry">
+     <rect>
+      <x>-30</x>
+      <y>10</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {   font-family: 'Montserrat', sans-serif;   font-size: 10px;   color: #fff;   background-color: #023020;   border-radius: 10px;   padding: 20px;   text-shadow: 2px 2px #333;   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); 
+background-color: rgb(98, 70, 137);}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="youssef.qrc">
+      <normaloff>:/arrow_391888.png</normaloff>:/arrow_391888.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_ArchiverC">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>460</y>
+      <width>131</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {   font-family: 'Montserrat', sans-serif;   font-size: 15px;   color: #fff;   background-color: #023020;   border-radius: 10px;   padding: 20px;   text-shadow: 2px 2px #333;   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); 
+background-color: rgb(98, 70, 137);}
+</string>
+    </property>
+    <property name="text">
+     <string>Archiver</string>
     </property>
    </widget>
    <zorder>label</zorder>
@@ -759,7 +812,6 @@ background-color: rgb(205, 171, 247);}
    <zorder>pushButton_triC</zorder>
    <zorder>lineEdit_telephone</zorder>
    <zorder>lineEdit_experience</zorder>
-   <zorder>pushButton_ArchiverC</zorder>
    <zorder>widget</zorder>
    <zorder>posteV_2</zorder>
    <zorder>label_10</zorder>
@@ -770,6 +822,8 @@ background-color: rgb(205, 171, 247);}
    <zorder>pushButton_supprimerC</zorder>
    <zorder>pushButton_refresh</zorder>
    <zorder>pushButton_camera</zorder>
+   <zorder>pb_back</zorder>
+   <zorder>pushButton_ArchiverC</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

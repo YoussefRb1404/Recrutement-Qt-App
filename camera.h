@@ -33,6 +33,7 @@ private slots:
     void readyForCapture(bool ready);
 
     void on_takeImageButton_clicked();
+    void on_pb_back2_clicked();
 
 private:
     Ui::camera *ui;

@@ -66,6 +66,7 @@ private slots:
     void on_tableView_doubleClicked(const QModelIndex &index);
 
     void marquerJoursExpiration(QCalendarWidget *calendrier);
+    void on_pb_back1_clicked();
 
 private:
     Ui::GesOff *ui;

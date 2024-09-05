@@ -17,7 +17,7 @@
    <widget class="QPushButton" name="pushButton_modifierO">
     <property name="geometry">
      <rect>
-      <x>110</x>
+      <x>140</x>
       <y>470</y>
       <width>141</width>
       <height>91</height>
@@ -61,10 +61,10 @@ background-color: rgb(98, 70, 137);}
    <widget class="QPushButton" name="pushButton_supprimerO">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>490</y>
+      <x>140</x>
+      <y>560</y>
       <width>141</width>
-      <height>51</height>
+      <height>71</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -77,12 +77,12 @@ background-color: rgb(98,70,137);}
     </property>
     <property name="icon">
      <iconset resource="youssef.qrc">
-      <normaloff>:/cancel_13707424.png</normaloff>:/cancel_13707424.png</iconset>
+      <normaloff>:/trash_6990104 (1).png</normaloff>:/trash_6990104 (1).png</iconset>
     </property>
     <property name="iconSize">
      <size>
-      <width>60</width>
-      <height>60</height>
+      <width>50</width>
+      <height>50</height>
      </size>
     </property>
    </widget>
@@ -615,7 +615,7 @@ QComboBox::down-arrow {
     <property name="geometry">
      <rect>
       <x>1390</x>
-      <y>10</y>
+      <y>20</y>
       <width>91</width>
       <height>51</height>
      </rect>
@@ -631,19 +631,19 @@ background-color: rgb(205, 171, 247);}
     </property>
     <property name="icon">
      <iconset resource="youssef.qrc">
-      <normaloff>:/upload_13707408.png</normaloff>:/upload_13707408.png</iconset>
+      <normaloff>:/refresh_4123673.png</normaloff>:/refresh_4123673.png</iconset>
     </property>
     <property name="iconSize">
      <size>
-      <width>60</width>
-      <height>60</height>
+      <width>50</width>
+      <height>50</height>
      </size>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_Mailling">
     <property name="geometry">
      <rect>
-      <x>350</x>
+      <x>280</x>
       <y>490</y>
       <width>101</width>
       <height>51</height>
@@ -794,25 +794,15 @@ background-color: rgb(98,70,137);}
     </widget>
     <widget class="QWidget" name="tab">
      <attribute name="title">
-      <string>Page</string>
+      <string>Calendrier</string>
      </attribute>
      <widget class="QCalendarWidget" name="calendarWidget">
       <property name="geometry">
        <rect>
-        <x>100</x>
-        <y>80</y>
-        <width>471</width>
-        <height>231</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lineEditNomPC">
-      <property name="geometry">
-       <rect>
-        <x>602</x>
-        <y>200</y>
-        <width>231</width>
-        <height>51</height>
+        <x>30</x>
+        <y>20</y>
+        <width>631</width>
+        <height>331</height>
        </rect>
       </property>
      </widget>
@@ -823,7 +813,7 @@ background-color: rgb(98,70,137);}
      <rect>
       <x>10</x>
       <y>490</y>
-      <width>101</width>
+      <width>131</width>
       <height>51</height>
      </rect>
     </property>
@@ -841,8 +831,36 @@ background-color: rgb(98, 70, 137);}
     </property>
     <property name="iconSize">
      <size>
-      <width>60</width>
-      <height>60</height>
+      <width>55</width>
+      <height>55</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pb_back1">
+    <property name="geometry">
+     <rect>
+      <x>-20</x>
+      <y>0</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {   font-family: 'Montserrat', sans-serif;   font-size: 10px;   color: #fff;   background-color: #023020;   border-radius: 10px;   padding: 20px;   text-shadow: 2px 2px #333;   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); 
+background-color: rgb(98, 70, 137);}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="youssef.qrc">
+      <normaloff>:/arrow_391888.png</normaloff>:/arrow_391888.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
      </size>
     </property>
    </widget>
@@ -874,6 +892,7 @@ background-color: rgb(98, 70, 137);}
    <zorder>pushButton_Mailling</zorder>
    <zorder>tabWidget</zorder>
    <zorder>pushButton_ajoutrO</zorder>
+   <zorder>pb_back1</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

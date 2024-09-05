@@ -1,4 +1,5 @@
 #include "mailling.h"
+#include "gesoff.h"
 #include "ui_mailling.h"
 
 #include <QtWidgets>
@@ -100,4 +101,9 @@ void Mailling::mailSent(QString status)
     ui->msg_2->clear();
     ui->paswd_2->clear();
 }
+void Mailling::on_pb_back3_clicked()
+ {
+    GesOff* mainWin = new GesOff;
+    mainWin->show();
 
+ }

@@ -1,6 +1,8 @@
 #include "gescond.h"
 #include "ui_gescond.h"
 #include "candidat.h"
+#include "options.h"
+
 
 
 
@@ -565,4 +567,11 @@ void GesCond::on_pushButton_camera_clicked()
 {
     c= new camera();
     c->show();
+}
+void GesCond::on_pb_back_clicked()
+{
+    options *e = new options;
+    e ->show();
+    hide();
+
 }

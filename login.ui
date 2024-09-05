@@ -142,12 +142,70 @@ background-color: rgb(83, 72, 176);}
      <bool>false</bool>
     </property>
    </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>-5</x>
+      <y>-5</y>
+      <width>811</width>
+      <height>581</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="youssef.qrc">:/loginY.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>20</y>
+      <width>341</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 25 italic 40pt &quot;Bahnschrift&quot;;
+color: rgb(209, 174, 254);</string>
+    </property>
+    <property name="text">
+     <string>JobCatalyst</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>170</y>
+      <width>71</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="youssef.qrc">:/password_9482103.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
    <zorder>type_2</zorder>
    <zorder>idF</zorder>
    <zorder>label</zorder>
+   <zorder>label_2</zorder>
    <zorder>lineEdit_mdp</zorder>
    <zorder>lineEdit_ID</zorder>
    <zorder>pushButton_login</zorder>
+   <zorder>label_3</zorder>
+   <zorder>label_4</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
